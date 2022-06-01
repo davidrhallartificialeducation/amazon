@@ -11,9 +11,10 @@ public class EstimateLinkedList {
     }
 
     public void add(Node node) {
-        node.next = head.next;
-        head.next = node;
         node.previous = head;
+        node.next = head.next;
+        node.next.previous = node;
+        head.next = node;
     }
 
     public void remove(Node node) {

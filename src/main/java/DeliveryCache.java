@@ -34,8 +34,8 @@ public class DeliveryCache {
             node.key = key;
         }
         createCapacity();
-        estimates.put(key, node);
         estimateLinkedList.add(node);
+        estimates.put(key, node);
     }
 
     private void createCapacity() {
